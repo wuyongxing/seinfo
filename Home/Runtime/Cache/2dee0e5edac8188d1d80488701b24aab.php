@@ -1,0 +1,53 @@
+<?php if (!defined('THINK_PATH')) exit();?><!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>个人主页</title>
+    <link rel="stylesheet" href="/seinfo/lib/css/bootstrap.css">
+    <script src="/seinfo/lib/js/jquery-1.10.2.min.js"></script>
+    <script src="/seinfo/lib/js/bootstrap.min.js"></script>
+</head>
+<body style="background-color: #F5F5F5">
+    <?php include "inc/title1.html" ?>
+    <div class="col-sm-offset-3 col-sm-6" style="margin-top: 1%; background-color: #FFFFFF; height: 450px" >
+        <div class="page-header">
+                <h1>我的资料 <small>修改资料</small></h1>
+            </div>
+            <form class="form-horizontal" action="__URL__/modify_info">
+                <fieldset>
+                    <div class="control-group col-sm-offset-3 col-sm-6" style="margin-top: 50px;">
+                        <label class="control-label col-sm-3" for="name">姓名</label>
+                        <div class="controls col-sm-4">
+                            <input type="text" class="input-xlarge" id="name" value="<?php echo ($li["name"]); ?>" />
+                        </div>
+                    </div>
+                    <div class="control-group col-sm-offset-3 col-sm-6" style="margin-top: 10px;">
+                        <label class="control-label col-sm-3" for="password">密码</label>
+                        <div class="controls col-sm-4">
+                            <input type="password" class="input-xlarge" id="password" value="<?php echo ($li["password"]); ?>" />
+                        </div>
+                    </div>
+                    <div class="control-group col-sm-offset-3 col-sm-6" style="margin-top: 10px;">
+                        <label class="control-label col-sm-3" for="age">年龄</label>
+                        <div class="controls col-sm-4">
+                            <input type="text" class="input-xlarge" id="age" value="<?php echo ($li["age"]); ?>" />
+                        </div>
+                    </div>
+                    <div class="control-group col-sm-offset-3 col-sm-6" style="margin-top: 10px;">
+                        <label class="control-label col-sm-3" for="sex">性别</label>
+                        <div class="controls col-sm-4">
+                            <select id="role">
+                                <option value="0" <?php if($li["sex"] == 0): ?>selected<?php endif; ?>>男</option>
+                                <option value="1" <?php if($li["sex"] == 1): ?>selected<?php endif; ?> >女</option>
+                            </select>
+                        </div>
+                    </div>  
+                    <div class="form-actions col-sm-offset-7 col-sm-6" style="margin-top: 10px;">
+                        <input type="submit" class="btn btn-info btn-large" value="修改" />
+                    </div>                  
+                </fieldset>
+            </form>
+    </div>
+    <?php include "inc/footer1.html" ?>
+</body>
+</html>

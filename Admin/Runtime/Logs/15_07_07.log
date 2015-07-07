@@ -1,0 +1,17 @@
+[ 2015-07-07T09:44:42+08:00 ] 127.0.0.1 /seinfo/admin.php
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001282s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001469s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.017245s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017425s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.002103s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.002088s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.002746s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.002300s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.009574s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.002411s ]
+INFO: [ view_end ] --END-- [ RunTime:0.002542s ]
+

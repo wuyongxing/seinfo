@@ -1,1 +1,4 @@
 [ 2015-07-09T08:33:26+08:00 ] ERR: (ThinkException) 非法操作:news
+[ 2015-07-09T09:08:17+08:00 ] ERR: (ThinkException) 非法操作:news
+[ 2015-07-09T09:39:37+08:00 ] ERR: (ThinkException) 非法操作:dele_news
+[ 2015-07-09T09:54:23+08:00 ] ERR: (ThinkException) 非法操作:homework

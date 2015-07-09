@@ -14,14 +14,14 @@
         	<div class="box_title"><a href="__URL__/news">通知公告</a></div>
             <a href="__URL__/news" class="more btn btn-small btn-primary disabled">查看更多</a>
             <ul class="unstyled">
-				<?php if(is_array($l1)): $i = 0; $__LIST__ = $l1;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$l1): $mod = ($i % 2 );++$i;?><li style="width:606px;"><a href="__URL__/get_news?id=<?php echo ($l1["id"]); ?>"><?php echo ($l1["title"]); ?></a><span><?php echo ($l1["time"]); ?></span></li><?php endforeach; endif; else: echo "" ;endif; ?>
+				<?php if(is_array($l1)): $i = 0; $__LIST__ = $l1;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$l1): $mod = ($i % 2 );++$i;?><li style="width:606px;"><a href="__URL__/get_news?nid=<?php echo ($l1["nid"]); ?>"><?php echo ($l1["title"]); ?></a><span><?php echo (date('Y-m-d H:i:s',$l1["time"])); ?></span></li><?php endforeach; endif; else: echo "" ;endif; ?>
             </ul>
         </div>
     	<div class="box pull-right" style="width:270px;">
         	<div class="box_title"><a href="__URL__/file">资料下载</a></div>
             <a href="__URL__/file" class="more" style="font-size:12px; color:#999;">更多</a>            
             <ul class="unstyled">
-				<?php if(is_array($l2)): $i = 0; $__LIST__ = $l2;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$l2): $mod = ($i % 2 );++$i;?><li style="width:225px;"><a href="__URL__/get_file?id=<?php echo ($l2["id"]); ?>"><?php echo ($l2["title"]); ?></a><span><?php echo ($l2["time"]); ?></span></li><?php endforeach; endif; else: echo "" ;endif; ?>
+				<?php if(is_array($l2)): $i = 0; $__LIST__ = $l2;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$l2): $mod = ($i % 2 );++$i;?><li style="width:225px;"><a href="__APP__/Person/get_file?fid=<?php echo ($l2["fid"]); ?>"><?php echo ($l2["filename"]); ?></a><span><?php echo (date('Y-m-d H:i:s',$l2["time"])); ?></span></li><?php endforeach; endif; else: echo "" ;endif; ?>
             </ul>
         </div>        
     </div>
@@ -30,14 +30,14 @@
         	<div class="box_title"><a href="__URL__/homework?classify=1">作业分享</a></div>
             <a href="__URL__/homework?classify=1" class="more btn btn-small btn-primary disabled">查看更多</a>
             <ul class="unstyled">
-				<?php if(is_array($l3)): $i = 0; $__LIST__ = $l3;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$l3): $mod = ($i % 2 );++$i;?><li style="width:606px;"><a href="__URL__/get_homework?classify=1&id=<?php echo ($l3["id"]); ?>"><?php echo ($l3["title"]); ?></a><span><?php echo ($l3["time"]); ?></span></li><?php endforeach; endif; else: echo "" ;endif; ?>
+				<?php if(is_array($l3)): $i = 0; $__LIST__ = $l3;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$l3): $mod = ($i % 2 );++$i;?><li style="width:606px;"><a href="__URL__/get_homework?classify=1&hid=<?php echo ($l3["hid"]); ?>"><?php echo ($l3["title"]); ?></a><span><?php echo (date('Y-m-d H:i:s',$l3["time"])); ?></span></li><?php endforeach; endif; else: echo "" ;endif; ?>
             </ul>
         </div>
     	<div class="box pull-right" style="width:270px;">
         	<div class="box_title"><a href="__URL__/homework?classify=2">生活娱乐</a></div>
                 <a href="__URL__/homework?classify=2" class="more" style="font-size:12px; color:#999;">更多</a>
                 <ul class="unstyled">
-                <?php if(is_array($l4)): $i = 0; $__LIST__ = $l4;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$l4): $mod = ($i % 2 );++$i;?><li style="width:225px;"><a href="__URL__/get_homework?classify=2&id=<?php echo ($l4["id"]); ?>"><?php echo ($l4["title"]); ?></a><span><?php echo ($l4["time"]); ?></span></li><?php endforeach; endif; else: echo "" ;endif; ?>
+                <?php if(is_array($l4)): $i = 0; $__LIST__ = $l4;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$l4): $mod = ($i % 2 );++$i;?><li style="width:225px;"><a href="__URL__/get_homework?classify=2&hid=<?php echo ($l4["hid"]); ?>"><?php echo ($l4["title"]); ?></a><span><?php echo (date('Y-m-d H:i:s',$l4["time"])); ?></span></li><?php endforeach; endif; else: echo "" ;endif; ?>
                 </ul>
             </div>
         </div>        

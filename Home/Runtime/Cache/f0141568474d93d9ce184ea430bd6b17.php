@@ -9,7 +9,7 @@
     <script src="/seinfo/lib/js/bootstrap.min.js"></script>
 </head>
 <body id="body1">
-    <p class="logo pull-left col-sm-12">用户登录</p>
+    <p class="logo pull-left col-sm-12">用户登录<a class="btn btn-default btn col-sm-offset-9" href="__ROOT__/admin.php/Login/login" role="button">管理员登陆</a></p>
     <div class="col-sm-offset-4 col-sm-4" style="margin-top: 15%; border: solid 1px #CCC;">
         <form class="form-horizontal" action="__URL__/dologin" method="post">
           <div class="form-group" style="margin-top: 10%;">

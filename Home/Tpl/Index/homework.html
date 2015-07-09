@@ -8,21 +8,22 @@
 <body>
 <div class="container">
 	<?php include "inc/title.html" ?>
+    <input type="text" id="classify" value="{$classify}" style="display: none;"/>
     <div class="photo"><div class="photo2"></div></div>
     <div class="row">
     	<div class="box pull-left" style="width: 930px;">
         	<div class="box_title"><a href="#">{$name}</a></div>
             <ul class="unstyled">
 			<volist id="li" name="li">
-            	<li style="width:600px;"><a href="index.php?m=Index&a=news_content&id={$li.id}">{$li.title}</a><span>{$li.time}</span></li>
+            	<li style="width:850px;"><a href="__URL__/get_homework?classify={$classify}&hid={$li.hid}">{$li.title}</a><span>{$li.time|date='Y-m-d H:i:s',###}</span></li>
             </volist>	
             </ul>
             <div class="clear"></div>
-            <div class="pagination pull-right">
+            <div class="pagination pull-left">
                 <ul>
-                    <li style="clear:none"><a href="index.php?m=Index&a=news&pageid={$up}">«</a></li>                                    
-                    <li style="clear:none"><a href="index.php?m=Index&a=news&pageid={$cur}">第{$cur}页,共{$totalpages}页</a></li>
-                    <li style="clear:none"><a href="index.php?m=Index&a=news&pageid={$down}">»</a></li>
+                    <li style="clear:none"><a href="__URL__/homework?classify={$classify}&pageid={$up}">«</a></li>                                    
+                    <li style="clear:none"><a href="__URL__/homework?classify={$classify}&pageid={$cur}">第{$cur}页,共{$totalpages}页</a></li>
+                    <li style="clear:none"><a href="__URL__/homework?classify={$classify}&pageid={$down}">»</a></li>
                 </ul>
             </div>
         </div>           
@@ -31,7 +32,8 @@
 <?php include "inc/footer.html" ?>
 <script>
 $(document).ready(function() {
-	$(".title").find("ul li:eq(1)").addClass("active");	
+	var no = parseInt($("#classify").val()) + 2;
+        $(".title").find("ul li:eq("+no+")").addClass("active");
 	var i = $.cookie("photo");
 	if(i == 1 ){
 		$(".photo2").animate({height:"180px"});

@@ -1,0 +1,13 @@
+[ 2015-07-08T00:46:08+08:00 ] ERR: (ThinkException) 模板不存在[./Home/Tpl/Person/modify_news.html]
+[ 2015-07-08T00:47:36+08:00 ] ERR: (ThinkException) 模板不存在[./Home/Tpl/Person/modify_news.html]
+[ 2015-07-08T08:25:10+08:00 ] ERR: (ThinkException) 非法操作:Person
+[ 2015-07-08T08:29:46+08:00 ] ERR: (ThinkException) 非法操作:index.php
+[ 2015-07-08T08:30:24+08:00 ] ERR: (ThinkException) 非法操作:get_news
+[ 2015-07-08T10:31:54+08:00 ] ERR: (ThinkException) 非法操作:dele_file
+[ 2015-07-08T16:10:19+08:00 ] ERR: (ThinkException) Action:error_403您所请求的方法不存在！
+[ 2015-07-08T16:31:50+08:00 ] ERR: (ThinkException) 非法操作:news_content
+[ 2015-07-08T17:00:35+08:00 ] ERR: (ThinkException) 非法操作:get_homework&classify=1&hid=2
+[ 2015-07-08T17:05:58+08:00 ] ERR: (ThinkException) 非法操作:__URL
+[ 2015-07-08T17:06:07+08:00 ] ERR: (ThinkException) 非法操作:__URL
+[ 2015-07-08T17:47:50+08:00 ] ERR: (ThinkException) 非法操作:get_homework&classify=1&hid=2
+[ 2015-07-08T17:48:02+08:00 ] ERR: (ThinkException) 非法操作:get_homework&classify=1&hid=2

@@ -1,4 +1,4 @@
-<!doctype html>
+<?php if (!defined('THINK_PATH')) exit();?><!doctype html>
 <html>
 <head>
 <meta charset="utf-8">
@@ -14,14 +14,14 @@
             <ol class="breadcrumb" style="float:left; width:900px">
                 <li style="float:left"><a href="__URL__/index">首页</a> <span class="divider">/</span></li>
                 <li style="float:left"><a href="__URL__/news">通知公告</a> <span class="divider">/</span></li>
-                <li style="float:left; background-color:transparent" class="active">{$li.title}</li>
+                <li style="float:left; background-color:transparent" class="active"><?php echo ($li["title"]); ?></li>
             </ol>
             <div class="news_content" style="width :930px;">
-            	<h4>{$li.title}</h4>
-                <span class="time">{$li.time|date='Y-m-d H:i:s',###}发布</span>
+            	<h4><?php echo ($li["title"]); ?></h4>
+                <span class="time"><?php echo (date('Y-m-d H:i:s',$li["time"])); ?>发布</span>
                 <div class="news_content_box">
 <!--//////////////////////////////////////////////////////////////--> 
-					<pre style="background-color: white;">{$li.content}</pre>                             
+					<pre style="background-color: white;"><?php echo ($li["content"]); ?></pre>                             
 <!--//////////////////////////////////////////////////////////////-->                
                 </div>
             </div>  

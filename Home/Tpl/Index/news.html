@@ -14,15 +14,15 @@
         	<div class="box_title"><a href="#">通知公告</a></div>
             <ul class="unstyled">
 			<volist id="li" name="li">
-            	<li style="width:600px;"><a href="index.php?m=Index&a=news_content&id={$li.id}">{$li.title}</a><span>{$li.time}</span></li>
+            	<li style="width:850px;"><a href="__URL__/get_news?nid={$li.nid}">{$li.title}</a><span>{$li.time|date='Y-m-d H:i:s',###}</span></li>
             </volist>	
             </ul>
             <div class="clear"></div>
-            <div class="pagination pull-right">
+            <div class="pagination pull-left">
                 <ul>
-                    <li style="clear:none"><a href="index.php?m=Index&a=news&pageid={$up}">«</a></li>                                    
-                    <li style="clear:none"><a href="index.php?m=Index&a=news&pageid={$cur}">第{$cur}页,共{$totalpages}页</a></li>
-                    <li style="clear:none"><a href="index.php?m=Index&a=news&pageid={$down}">»</a></li>
+                    <li style="clear:none"><a href="__URL__/news?pageid={$up}">«</a></li>                                    
+                    <li style="clear:none"><a href="__URL__/news?pageid={$cur}">第{$cur}页,共{$totalpages}页</a></li>
+                    <li style="clear:none"><a href="__URL__/news?pageid={$down}">»</a></li>
                 </ul>
             </div>
         </div>           

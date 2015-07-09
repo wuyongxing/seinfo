@@ -133,6 +133,7 @@ class IndexAction extends AuthorAction{
 	public function homework()
 	{
 		$where['classify'] = $_GET['classify'];
+		$this->assign('classify',$where['classify']);
 		if($_GET['classify'] == 1) $this->assign('name',"作业分享");
 		else if($_GET['classify'] == 2) $this->assign('name',"生活娱乐");
 		if( isset($_GET['pageid'])&&is_numeric($_GET['pageid']) )
@@ -190,14 +191,41 @@ class IndexAction extends AuthorAction{
 	}
 	public function get_news()
 	{
+		$where['nid'] = $_GET['nid'];
+		$a = M('news');
+		$b = $a->where($where)->select();
+		$b = $b[0];
+		$this->assign('li',$b);
 		$this->display();
 	}
 	public function get_homework()
 	{
+		$where['classify'] = $_GET['classify'];
+		$this->assign('classify',$_GET['classify']);
+		$where['hid'] = $_GET['hid'];
+		$a = M('homework');
+		$b = $a->where($where)->select();
+		$b = $b[0];
+		$this->assign('homework',$b);
+		$e = M('person');
+		$f = $e->where('pid = '.$b['pid'])->select();
+		$f = $f[0];
+		$this->assign('name',$f['name']);
+		$c = M('respond');
+		$where1['respond.hid'] = $_GET['hid'];
+		$d = $c->join('LEFT JOIN person ON respond.pid = person.pid')->where($where1)->order('time asc')->select();
+		$this->assign('li',$d);
 		$this->display();
 	}
-	public function info()
+	public function add_comment()
 	{
-		$this->display();
+		$where['hid'] = $_GET['hid'];
+		$where['content'] = $_GET['content'];
+		$where['pid'] = $_SESSION['pid'];
+		$where['time'] = time();
+		$a = M('respond');
+		$ok = $a->add($where);
+		if($ok) $this->success("添加成功");
+		else $this->error("添加失败"); 
 	}
 }

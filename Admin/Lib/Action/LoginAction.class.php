@@ -9,7 +9,7 @@
 		{
 			$username = $_POST['username'];
 			$password = $_POST['password'];
-			$user=M('person');
+			$user=M('admin');
 			$where['username'] = $username;
 			$where['password'] = $password;
 			$arr = $user->where($where)->select();
@@ -17,7 +17,7 @@
 			if($arr)
 			{
 				$_SESSION['username'] = $username;
-				$_SESSION['pid'] = $arr[0]['pid'];
+				$_SESSION['aid'] = $arr[0]['aid'];
 				$this->success('用户登录成功',U('Index/index'));
 			}
 			else

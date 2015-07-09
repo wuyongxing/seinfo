@@ -13,14 +13,14 @@
     	<div class="box pull-left" style="width: 930px;">
         	<div class="box_title"><a href="#">文件下载</a></div>
             <ul class="unstyled">
-            	<?php if(is_array($li)): $i = 0; $__LIST__ = $li;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$li): $mod = ($i % 2 );++$i;?><li style="width:600px;"><a href="index.php?m=Index&a=get_file&id=<?php echo ($li["id"]); ?>"><?php echo ($li["title"]); ?></a><span><?php echo ($li["time"]); ?></span></li><?php endforeach; endif; else: echo "" ;endif; ?>
+            	<?php if(is_array($li)): $i = 0; $__LIST__ = $li;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$li): $mod = ($i % 2 );++$i;?><li style="width:850px;"><a href="__APP__/Person/get_file?fid=<?php echo ($li["fid"]); ?>"><?php echo ($li["filename"]); ?></a><span><?php echo (date('Y-m-d H:i:s',$li["time"])); ?></span></li><?php endforeach; endif; else: echo "" ;endif; ?>
             </ul>
 			<div class="clear"></div>
-            <div class="pagination pull-right">
+            <div class="pagination pull-left">
                 <ul>
-                    <li style="clear:none"><a href="index.php?m=Index&a=file&pageid=<?php echo ($up); ?>"><<</a></li>                                    
-                    <li style="clear:none"><a href="index.php?m=Index&a=file&pageid=<?php echo ($cur); ?>">第<?php echo ($cur); ?>页,共<?php echo ($totalpages); ?>页</a></li>
-                    <li style="clear:none"><a href="index.php?m=Index&a=file&pageid=<?php echo ($down); ?>">>></a></li>
+                    <li style="clear:none"><a href="__URL__/file?pageid=<?php echo ($up); ?>">«</a></li>                                    
+                    <li style="clear:none"><a href="__URL__/file?pageid=<?php echo ($cur); ?>">第<?php echo ($cur); ?>页,共<?php echo ($totalpages); ?>页</a></li>
+                    <li style="clear:none"><a href="__URL__/file?pageid=<?php echo ($down); ?>">»</a></li>
                 </ul>
             </div>            
         </div>              

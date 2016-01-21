@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>陕西省西安市两化融合</title>
+<title>软件学院信息交流平台</title>
 <?php include "inc/cssjs.html" ?>
 </head>
 <body>
